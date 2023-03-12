@@ -1,0 +1,27 @@
+.contact-form {
+  min-height: 680px;
+  padding-top: 100px;
+  padding-bottom: 60px;
+
+  background: #5a5a5a url("../img/form-bg.jpg") top center/cover no-repeat;
+}
+
+.contact-form__title {
+  max-width: 860px;
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.contact-form__subtitle {
+  margin-bottom: 36px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+}

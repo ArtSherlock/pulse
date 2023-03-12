@@ -1,0 +1,43 @@
+.slider {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.slider__goods {  
+  margin: 0 auto;
+  width: 300px;
+
+  @media (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media (min-width: 1140px) {
+    width: 750px;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 50px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -70px;
+}
+
+.slick-next {
+  right: -70px;
+}
+
+.slick-dots {
+  display: flex;
+}
