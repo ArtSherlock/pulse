@@ -13,7 +13,7 @@
   width: 220px;
   height: 50px;
 
-  background: rgba(0, 0, 0, 0.0001);
+  background: #fff;
   border: 2px solid #D0D0D0;
   cursor: pointer;
 
@@ -23,13 +23,158 @@
   color: #6B6B6B;
 
   transform: skewX(-25deg);
+  transition: 250ms box-shadow ease;
 
   &:not(:last-child) {
     margin-right: 10px;
   }
 
+  &:hover {
+    box-shadow: 3px 3px 6px #6B6B6B;
+  }
+
   &--equal {
     display: block;
     transform: skewX(25deg);
+  }
+
+  &--active {
+    border: none;
+    background-color: #C70101;
+    color: #fff;
+  }
+}
+
+// CATALOG LIST
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 20px;
+
+  @media (max-width: 1139px) {
+    justify-content: center;
+  }
+}
+
+.catalog-item {
+  width: 300px;
+  min-height: 440px;
+  padding: 20px;
+  
+  border: 2px solid #E8E8E8;
+  overflow: hidden;
+}
+
+.catalog-item__img {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  
+  height: 200px;
+}
+
+.catalog-item__name {
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.catalog-item__descr {
+  margin-bottom: 10px;
+
+  font-weight: 300;
+  line-height: 22px;
+  text-align: center;
+}
+
+.catalog-item__link {
+  display: block;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #C70101;
+}
+
+.divider {
+  margin: 17px 0;
+  border: 1px solid #e8e8e8;
+}
+
+.catalog-item__footer {
+  display: flex;
+  justify-content: space-between;
+  
+  line-height: 1;
+  color: #555555;
+}
+
+.catalog-item__old-price {
+  margin-top: 4px;
+  margin-bottom: 2px;
+
+  font-weight: 300;
+  text-decoration-line: line-through;
+}
+
+.catalog-item__price {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.catalog-item__btn {
+  padding: 11px 40px;
+}
+
+.catalog-item__wrapper {
+  display: flex;
+  width: calc(200% + 40px); 
+}
+
+.catalog-item__content {
+  width: 50%;
+  margin-right: 0;
+  // padding-right: 20px;
+  transform: translateX(-100%);
+  transition: 250ms translateX;
+
+  &--active {
+    transform: translateX(0);
+    margin-right: 20px;
+  }
+}
+
+.catalog-item__list {
+  width: 50%;
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  transform: translateX(0);
+  transition: 250ms translateX;
+
+  &--active {
+    transform: translateX(-100%);
+    margin-left: 0;
+  }
+}
+
+.catalog-item__item {
+  position: relative;
+
+  font-weight: 300;
+  line-height: 1.5;
+  color: #555;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    height: 5px;
+    width: 5px;
+    background-color: #C70101;
   }
 }
