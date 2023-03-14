@@ -6,8 +6,12 @@
   font-weight: 500;
   line-height: 1.56;
 
-  background: #C70101;
+  background-color: var(--accent-color);
   border-radius: 5px;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: #af1919;
+  }
 }

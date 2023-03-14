@@ -60,10 +60,11 @@
   border-radius: 50%;
 
   font-size: 0;
+  cursor: pointer;
   }
 
 }
 
 .slick-active button {
-  background-color: #C70101;
+  background-color: var(--accent-color);
 }

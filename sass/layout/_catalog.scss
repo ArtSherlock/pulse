@@ -40,7 +40,7 @@
 
   &--active {
     border: none;
-    background-color: #C70101;
+    background-color: var(--accent-color);
     color: #fff;
   }
 
@@ -106,7 +106,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
-  color: #C70101;
+  color: var(--accent-color);
 }
 
 .divider {
@@ -194,6 +194,6 @@
     top: 8px;
     height: 5px;
     width: 5px;
-    background-color: #C70101;
+    background-color: var(--accent-color);
   }
 }

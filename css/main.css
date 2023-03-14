@@ -1,5 +1,6 @@
 :root {
   --main-text-color: #0D0D0D;
+  --accent-color: #C70101;
 }
 
 .visually-hidden {
@@ -78,10 +79,13 @@ blockquote {
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.56;
-  background: #C70101;
+  background-color: var(--accent-color);
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+.btn:hover {
+  background-color: #af1919;
 }
 
 .section-title {
@@ -455,10 +459,11 @@ blockquote {
   border: none;
   border-radius: 50%;
   font-size: 0;
+  cursor: pointer;
 }
 
 .slick-active button {
-  background-color: #C70101;
+  background-color: var(--accent-color);
 }
 
 .catalog {
@@ -506,7 +511,7 @@ blockquote {
 }
 .catalog__tab--active {
   border: none;
-  background-color: #C70101;
+  background-color: var(--accent-color);
   color: #fff;
 }
 @media (max-width: 480px) {
@@ -571,7 +576,7 @@ blockquote {
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
-  color: #C70101;
+  color: var(--accent-color);
 }
 
 .divider {
@@ -670,7 +675,7 @@ blockquote {
   top: 8px;
   height: 5px;
   width: 5px;
-  background-color: #C70101;
+  background-color: var(--accent-color);
 }
 
 .feedback {
@@ -708,4 +713,80 @@ blockquote {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.footer {
+  position: relative;
+  height: 630px;
+  background: url("../img/map.jpg") top center/cover no-repeat;
+}
+
+.footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 460px;
+  height: 270px;
+  padding: 50px;
+  background: var(--accent-color);
+}
+
+.address,
+.phone {
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+}
+
+.address {
+  margin-bottom: 36px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.phone {
+  font-weight: 700;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+}
+
+.social-links__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.social-link:hover {
+  background-color: #af1919;
+  border: none;
 }/*# sourceMappingURL=main.css.map */
