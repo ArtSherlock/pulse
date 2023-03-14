@@ -15,6 +15,13 @@ $(document).ready(function(){
     ]
   });
 
+  $('.feedback__slider').slick({
+    speed: 500,
+    adaptiveHeight: true,
+    dots: true,
+    arrows: false
+  });
+
   $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab--active)', function() {
   $(this)
     .addClass('catalog__tab--active').siblings().removeClass('catalog__tab--active')

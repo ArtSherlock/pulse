@@ -40,4 +40,30 @@
 
 .slick-dots {
   display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  li {
+    height: 0;    
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  button {
+  height: 12px;
+  width: 12px;
+
+  background-color: #646464;
+  border: none;
+  border-radius: 50%;
+
+  font-size: 0;
+  }
+
+}
+
+.slick-active button {
+  background-color: #C70101;
 }
