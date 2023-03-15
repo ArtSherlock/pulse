@@ -17,6 +17,12 @@
   padding: 35px 25px 40px;
 
   background-color: #F2F2F2;
+
+  .error {
+    padding-top: -10px;
+    padding-left: 10px;    
+    color: var(--accent-color);
+  }
 }
 
 #consultation,
