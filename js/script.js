@@ -41,4 +41,23 @@ $(document).ready(function(){
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
 
+  // MODAL WINDOWS
+  $('[data-modal=consultation]').on('click', function () {
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+
+  $('.modal__close').on('click', function () {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  });
+
+  // $('.catalog-item__btn').on('click', function () {
+  //   $('.overlay, #order').fadeIn('slow');
+  // });
+
+  $('.catalog-item__btn').each(function (i) {
+    $(this).on('click', function () {
+      $('#order .modal__subtitle').text($('.catalog-item__name').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    });
+  });
 });
