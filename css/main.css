@@ -17,6 +17,35 @@
   overflow: hidden;
 }
 
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 body {
   font: 400 14px/18px "MuseoModerno", sans-serif;
   color: var(--main-text-color);
@@ -212,6 +241,13 @@ blockquote {
   font-size: 14px;
   line-height: 1.57;
   text-align: center;
+}
+
+.page-up {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
 }
 
 .promo {
@@ -439,6 +475,15 @@ blockquote {
 .empharsise {
   color: #f00;
   text-decoration: underline;
+}
+
+.heartbeat-effect {
+  -webkit-animation: heartbeat 2500ms infinite ease;
+          animation: heartbeat 2500ms infinite ease;
+}
+.heartbeat-effect:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .contact-form {

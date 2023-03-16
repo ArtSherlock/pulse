@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
   $('.slider__goods').slick({
     speed: 500,
     adaptiveHeight: true,
@@ -22,10 +22,10 @@ $(document).ready(function(){
     arrows: false
   });
 
-  $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab--active)', function() {
-  $(this)
-    .addClass('catalog__tab--active').siblings().removeClass('catalog__tab--active')
-    .closest('div.container').find('ul.catalog-list').removeClass('catalog-list--active').eq($(this).index()).addClass('catalog-list--active');
+  $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab--active)', function () {
+    $(this)
+      .addClass('catalog__tab--active').siblings().removeClass('catalog__tab--active')
+      .closest('div.container').find('ul.catalog-list').removeClass('catalog-list--active').eq($(this).index()).addClass('catalog-list--active');
   });
 
   function toggleSlide(item) {
@@ -49,10 +49,6 @@ $(document).ready(function(){
   $('.modal__close').on('click', function () {
     $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
   });
-
-  // $('.catalog-item__btn').on('click', function () {
-  //   $('.overlay, #order').fadeIn('slow');
-  // });
 
   $('.catalog-item__btn').each(function (i) {
     $(this).on('click', function () {
@@ -93,4 +89,20 @@ $(document).ready(function(){
   validateForms('#order form');
 
   $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+  // Smooth scroll to top of page
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1400) {
+      $('.page-up').fadeIn();
+    } else {
+      $('.page-up').fadeOut();
+    }
+  });
+
+  $("a[href^='#']").click(function() {
+    const _href = $(this).attr('href');
+  $('html, body').animate({ scrollTop: $(_href).offset().top + 'px' });
+  return false;
+});
+
 });

@@ -48,3 +48,11 @@
   color: #f00;
   text-decoration: underline;
 }
+
+.heartbeat-effect {
+  animation: heartbeat 2500ms infinite ease;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
